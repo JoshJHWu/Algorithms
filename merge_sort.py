@@ -3,10 +3,11 @@ import code #code.interact(local=locals())
 from IPython import embed #embed()
 
 def mergesort(arr):
+    print("splitting",arr)
     if len(arr) == 1:
         return arr
     mid = len(arr)/2
-    l = mergesort(arr[0:mid])
+    l = mergesort(arr[:mid])
     r = mergesort(arr[mid:])
     merge(l,r)
 
@@ -22,8 +23,10 @@ def merge(l,r):
             result.append(r[j])
             j += 1
     if i != len(l):
+        print("merging", result + l[i:])
         return result + l[i:]
     if j != len(r):
+        print("merging", result + r[j:])
         return result + r[j:]
 
 
