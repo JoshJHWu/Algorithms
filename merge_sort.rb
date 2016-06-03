@@ -1,6 +1,7 @@
 require 'pry'
 
 def mergesort(arr)
+	puts "splitting #{arr}"
 	return arr if arr.length == 1
 	mid = arr.length/2
 	l = mergesort(arr[0...mid])
@@ -22,11 +23,13 @@ def merge(l,r)
 		end
 	end
 	if i != l.length
+		puts "merging #{result + l[i..-1]}"
 		return result + l[i..-1]
 	end
 	if j != r.length
+		puts "merging #{result + r[j..-1]}"
 		return result + r[j..-1]
 	end
 end
 
-p mergesort([1,7,4,6,2])
+p mergesort([7,1,4,6,2])
