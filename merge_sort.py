@@ -9,7 +9,7 @@ def mergesort(arr):
     mid = len(arr)/2
     l = mergesort(arr[:mid])
     r = mergesort(arr[mid:])
-    merge(l,r)
+    return merge(l,r)
 
 def merge(l,r):
     i = 0
@@ -31,4 +31,4 @@ def merge(l,r):
 
 
 print mergesort([1,7,4,6,2])
-# print merge([1,4,3],[2,5])
+# print merge([2,7],[5])

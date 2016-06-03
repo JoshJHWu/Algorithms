@@ -32,4 +32,4 @@ def merge(l,r)
 	end
 end
 
-p mergesort([1,7,4,6,2])
+p mergesort([7,1,4,6,2])
